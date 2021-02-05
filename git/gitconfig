@@ -1,0 +1,5 @@
+[user]
+	name = Louis Gasnault
+	email = louis.gasnault@epita.fr
+[pull]
+	rebase = true

@@ -1,0 +1,70 @@
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins
+
+Plugin 'tpope/vim-sensible'
+
+Plugin 'universal-ctags/ctags'
+
+" Color schemes
+Plugin 'drewtempelmeyer/palenight.vim'
+Plugin 'morhetz/gruvbox'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set cursorline
+
+runtime! plugin/sensible.vim
+
+set encoding=utf-8 fileencodings=
+syntax on
+
+set number
+set cc=80
+
+autocmd Filetype make setlocal noexpandtab
+autocmd Filetype asm setlocal noexpandtab
+
+set list listchars=tab:»·,trail:·
+
+set background=dark
+
+let g:lightline = { 'colorscheme': 'gruvbox' }
+let g:gruvbox_contrast_dark = 'soft'
+let g:airline_theme = "gruvbox"
+
+colorscheme gruvbox
+
+if (has("termguicolors"))
+	set termguicolors
+endif
+
+" per .git vim configs
+" just `git config vim.settings "expandtab sw=4 sts=4"` in a git repository
+" change syntax settings for this repository
+let git_settings = system("git config --get vim.settings")
+if strlen(git_settings)
+	exe "set" git_settings
+endif
+
+" update shortcut
+nnoremap <F3> :update<CR>
+inoremap <F3> <ESC>:update<CR>gi
+
+" prevent vim from creating .viminfo file
+set nocompatible
+set viminfo=""
