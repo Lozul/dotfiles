@@ -1,13 +1,14 @@
 alias ls='ls --color=auto'
 alias grep='grep --color -n'
 
-alias prog=". /media/share/prog/prog.sh"
 alias cf="clang-format -i -style=file"
 
 alias fr="setxkbmap fr"
-alias gb="setxkbmap gb"
+alias gb="setxkbmap gb -variant extd"
 
 alias land="xrandr --output Virtual-1 --mode 1920x1080_60.00"
 alias port="xrandr --output Virtual-1 --mode 1080x1920_60.00"
 
 alias fuckit="git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\""
+
+alias py="python"

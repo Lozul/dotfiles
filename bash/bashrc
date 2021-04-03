@@ -45,7 +45,7 @@ __prompt_command()
     PS1+='\[\e[1;93m\]\$\[\e[0m\] '
 
     # Change terminal title
-    printf "\e]0; %s \a" "${PWD}"
+    printf "\e]0;%s\a" "${PWD}"
 }
 
 export PROMPT_COMMAND=__prompt_command
