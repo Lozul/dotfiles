@@ -1,17 +1,13 @@
-
-" Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-" General
 set number
 set linebreak
 set showmatch
-set visualbell
+set cursorline
 
 set ignorecase
 
@@ -23,5 +19,5 @@ set cc=80
 
 syntax on
 
-" Colorscheme
-colorscheme nord
+set bg=dark
+colorscheme gruvbox
